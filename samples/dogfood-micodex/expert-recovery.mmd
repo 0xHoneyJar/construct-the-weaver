@@ -1,0 +1,52 @@
+flowchart TD
+    Open(["🌅 gumi opens studio<br/>day 2 · returning"])
+
+    subgraph welcome ["🚪 welcome surface — first-time only today"]
+        Welcome["welcome screen<br/>welcome-screen.tsx"]
+        NewProject["➕ new collection<br/>name input only"]
+        SampleProject["🎨 explore sample data<br/>loads /tmp/micodex-sample"]
+    end
+
+    subgraph picker ["❓ project picker — currently absent"]
+        Recent["📁 recent projects list"]
+        OpenExisting["📂 open from folder"]
+        ImportFolder["🗂 import from folder<br/>drag-and-drop subfolders"]
+    end
+
+    Studio["🏠 studio shell<br/>6 tabs · last-tab-restored?"]
+
+    subgraph save ["💾 save semantics — sovereignty break"]
+        TmpHome["⚠️ /tmp/micodex-demo<br/>ephemeral · vanishes on reboot"]
+        ProjectPath{"🤔 is there a<br/>real home?"}
+        FolderPicker["📍 folder picker<br/>not yet built"]
+        UserOwned["🏡 ~/Documents/MyCollection<br/>user-owned path"]
+    end
+
+    Open --> Welcome
+    Welcome -.->|missing| Recent
+    Welcome -.->|missing| OpenExisting
+    Welcome -.->|missing| ImportFolder
+    Welcome --> NewProject
+    Welcome --> SampleProject
+    NewProject --> TmpHome
+    SampleProject --> TmpHome
+    TmpHome --> Studio
+    Studio -.-> ProjectPath
+    ProjectPath -.->|missing| FolderPicker
+    FolderPicker -.-> UserOwned
+
+    classDef gap fill:#ffe4e1,stroke:#c62828,stroke-dasharray:5,color:#5a0000
+    classDef partial fill:#fff8e1,stroke:#f9a825,color:#5a3a00
+    classDef exists fill:#e8f5e9,stroke:#2e7d32,color:#0a3a0a
+    classDef chrome fill:#eef5ff,stroke:#3f51b5,color:#0a1f4a
+    classDef question fill:#fff3e0,stroke:#ff8f00,stroke-dasharray:5,color:#5a3a00
+
+    class Recent,OpenExisting,ImportFolder,FolderPicker,UserOwned gap
+    class TmpHome partial
+    class Welcome,NewProject,SampleProject exists
+    class Studio chrome
+    class ProjectPath question
+
+    style welcome fill:#fafafa,stroke:#999
+    style picker fill:#fff5f5,stroke:#c62828,stroke-dasharray:3
+    style save fill:#fffaf0,stroke:#f9a825

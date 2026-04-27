@@ -1,0 +1,80 @@
+flowchart TD
+    Open(["📦 author opens studio<br/>wants to ship a codex"])
+    Welcome["🚪 welcome screen<br/>no intent disambiguation"]
+
+    subgraph intent ["❓ intent split — currently absent"]
+        IntentColl["🎨 make a collection<br/>art-shaped"]
+        IntentConstr["🧬 make a construct<br/>codex-shaped"]
+        IntentBoth["🔀 both<br/>same project"]
+    end
+
+    NewProject["➕ new collection<br/>name input"]
+    Studio["🏠 studio shell<br/>6 tabs · identical for both intents"]
+
+    subgraph collpath ["🎨 collection path — today's golden path"]
+        Build["🖼 build<br/>upload layers"]
+        Rules["⚖️ rules<br/>incompatibility / weight"]
+        Preview["👁 preview<br/>regenerate"]
+    end
+
+    subgraph constrpath ["🧬 construct path — invisible today"]
+        Identity["🪪 identity<br/>signal hierarchy + persona"]
+        Lore["📖 lore<br/>entries + connections"]
+        Graph["🕸 graph<br/>knowledge graph viz"]
+    end
+
+    subgraph export ["📤 export — terminal today"]
+        ExportTab["export tab<br/>two buttons"]
+        CollExp["📦 collection export<br/>JSON + metadata + TDR"]
+        ConstrExp["🧬 construct export<br/>mibera-codex-v3 shape"]
+        Validate{"🛡 shape validation<br/>mibera-codex-v3"}
+        Pass["✅ all 6 required files<br/>+ 3 skills + 5 dirs"]
+        Fail["❌ missing identity/persona.yaml<br/>or graph.json or skill schema"]
+    end
+
+    subgraph publish ["🚀 publish — gap"]
+        Pack["🗜 zip the construct files"]
+        Registry["☁️ push to registry"]
+        Install["💻 someone runs /constructs install"]
+    end
+
+    Open --> Welcome
+    Welcome -.->|missing| IntentColl
+    Welcome -.->|missing| IntentConstr
+    Welcome -.->|missing| IntentBoth
+    Welcome --> NewProject
+    NewProject --> Studio
+    Studio --> Build
+    Studio --> Rules
+    Studio --> Preview
+    Studio --> Identity
+    Studio --> Lore
+    Studio --> Graph
+    Studio --> ExportTab
+    ExportTab --> CollExp
+    ExportTab --> ConstrExp
+    ConstrExp --> Validate
+    Validate -->|valid| Pass
+    Validate -->|invalid| Fail
+    Pass -.->|missing| Pack
+    Pack -.-> Registry
+    Registry -.-> Install
+
+    classDef gap fill:#ffe4e1,stroke:#c62828,stroke-dasharray:5,color:#5a0000
+    classDef partial fill:#fff8e1,stroke:#f9a825,color:#5a3a00
+    classDef exists fill:#e8f5e9,stroke:#2e7d32,color:#0a3a0a
+    classDef chrome fill:#eef5ff,stroke:#3f51b5,color:#0a1f4a
+    classDef question fill:#fff3e0,stroke:#ff8f00,stroke-dasharray:5,color:#5a3a00
+    classDef win fill:#d1f0d1,stroke:#1b5e20,stroke-width:2px,color:#0a3a0a
+
+    class IntentColl,IntentConstr,IntentBoth,Pack,Registry,Install gap
+    class Identity,Lore,Graph partial
+    class Welcome,NewProject,Studio,Build,Rules,Preview,ExportTab,CollExp,ConstrExp,Validate chrome
+    class Pass win
+    class Fail question
+
+    style intent fill:#fff5f5,stroke:#c62828,stroke-dasharray:3
+    style collpath fill:#f5fff5,stroke:#2e7d32
+    style constrpath fill:#fffaf0,stroke:#f9a825
+    style export fill:#f5f8ff,stroke:#3f51b5
+    style publish fill:#fff5f5,stroke:#c62828,stroke-dasharray:3

@@ -1,0 +1,72 @@
+flowchart TD
+    Export(["✅ just exported"])
+    What{"🤔 which shape?"}
+    CollExp["📦 collection manifest<br/>JSON + metadata"]
+    ConstrExp["🧬 construct<br/>mibera-codex-v3 zip"]
+
+    NextChoice{"🤔 what's next?"}
+
+    subgraph deploy ["🛠 deploy on-chain — protocol ready"]
+        Deploy1["📜 wire contract template"]
+        Deploy2["🧪 deploy to testnet"]
+        Deploy3["🔍 verify on explorer"]
+        Deploy4["🚀 deploy to mainnet"]
+    end
+
+    subgraph pin ["📌 pin to IPFS — construct missing"]
+        Pin1["🖼 upload images"]
+        Pin2["📋 upload metadata"]
+        Pin3["🔗 update tokenURI base"]
+    end
+
+    subgraph comm ["🎭 community customization — partial"]
+        Comm1["🎨 publish trait pool"]
+        Comm2["🎟 run mint event"]
+        Comm3["🎁 hook on-mint customization"]
+        Comm4["📡 stream / log events"]
+    end
+
+    subgraph share ["📣 share the work — herald + oracle ready"]
+        Share1["📢 announce"]
+        Share2["💬 generate post copy"]
+        Share3["📰 publish lore page"]
+    end
+
+    Iterate["🔁 iterate<br/>back to studio"]
+
+    Export --> What
+    What --> CollExp
+    What --> ConstrExp
+    CollExp --> NextChoice
+    ConstrExp --> NextChoice
+    NextChoice --> Deploy1
+    NextChoice --> Pin1
+    NextChoice --> Comm1
+    NextChoice --> Share1
+    NextChoice --> Iterate
+
+    Deploy1 --> Deploy2 --> Deploy3 --> Deploy4
+    Pin1 --> Pin2 --> Pin3
+    Comm1 --> Comm2 --> Comm3 --> Comm4
+    Share1 --> Share2
+    Share1 --> Share3
+
+    classDef gap fill:#ffe4e1,stroke:#c62828,stroke-dasharray:5,color:#5a0000
+    classDef partial fill:#fff8e1,stroke:#f9a825,color:#5a3a00
+    classDef exists fill:#e8f5e9,stroke:#2e7d32,color:#0a3a0a
+    classDef chrome fill:#eef5ff,stroke:#3f51b5,color:#0a1f4a
+    classDef question fill:#fff3e0,stroke:#ff8f00,stroke-dasharray:5,color:#5a3a00
+
+    class Deploy1,Deploy2,Deploy3,Deploy4 exists
+    class Comm1,Comm2 partial
+    class Comm3,Comm4 gap
+    class Pin1,Pin2,Pin3 gap
+    class Share1,Share2,Share3 partial
+    class Iterate chrome
+    class What,NextChoice question
+    class Export,CollExp,ConstrExp exists
+
+    style deploy fill:#f5fff5,stroke:#2e7d32
+    style pin fill:#fff5f5,stroke:#c62828,stroke-dasharray:3
+    style comm fill:#fffaf0,stroke:#f9a825
+    style share fill:#fffaf0,stroke:#f9a825

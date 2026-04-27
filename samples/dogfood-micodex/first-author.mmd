@@ -1,0 +1,72 @@
+flowchart TD
+    Open(["👋 gumi opens studio<br/>first time"])
+
+    subgraph welcome ["🚪 welcome surface"]
+        Welcome["welcome screen<br/>welcome-screen.tsx"]
+        NewProject["➕ new collection<br/>name input"]
+        SampleProject["🎨 sample collection<br/>4 cats · 3-4 layers · 2 rules"]
+    end
+
+    subgraph intent ["❓ intent disambiguation — currently absent"]
+        IntentMake["🎨 i want to make a collection"]
+        IntentCodex["🧬 i want to make a construct"]
+        IntentExplore["👀 just show me what this is"]
+    end
+
+    subgraph studio ["🏠 studio shell — 6 tabs"]
+        Build["🖼 build<br/>upload layers"]
+        Rules["⚖️ rules<br/>incompatibility / weight"]
+        Identity["🪪 identity<br/>signal hierarchy"]
+        Lore["📖 lore<br/>entities / connections"]
+        Graph["🕸 graph<br/>knowledge viz"]
+        Export["📤 export<br/>collection or construct"]
+    end
+
+    subgraph wins ["✨ first-win moment"]
+        Save["💾 save<br/>writes to /tmp/micodex-demo"]
+        FirstWin{"⏱ first-win<br/>shape?"}
+        Win1["👁 saw a generated preview"]
+        Win2["📦 exported a manifest"]
+        Win3["🤝 shared with a friend"]
+    end
+
+    Open --> Welcome
+    Welcome -.->|missing| IntentMake
+    Welcome -.->|missing| IntentCodex
+    Welcome -.->|missing| IntentExplore
+    IntentMake --> NewProject
+    IntentCodex --> NewProject
+    IntentExplore --> SampleProject
+    Welcome --> NewProject
+    Welcome --> SampleProject
+    NewProject --> Studio
+    SampleProject --> Studio
+    Studio --> Build
+    Studio --> Rules
+    Studio --> Identity
+    Studio --> Lore
+    Studio --> Graph
+    Studio --> Export
+    Build -.->|spacebar regenerates| FirstWin
+    FirstWin --> Win1
+    Save --> Win2
+    Win2 --> Win3
+
+    classDef gap fill:#ffe4e1,stroke:#c62828,stroke-dasharray:5,color:#5a0000
+    classDef partial fill:#fff8e1,stroke:#f9a825,color:#5a3a00
+    classDef exists fill:#e8f5e9,stroke:#2e7d32,color:#0a3a0a
+    classDef chrome fill:#eef5ff,stroke:#3f51b5,color:#0a1f4a
+    classDef question fill:#fff3e0,stroke:#ff8f00,stroke-dasharray:5,color:#5a3a00
+    classDef win fill:#d1f0d1,stroke:#1b5e20,stroke-width:2px,color:#0a3a0a
+
+    class IntentMake,IntentCodex,IntentExplore gap
+    class Win1,Win2,Win3 win
+    class FirstWin question
+    class Build,Rules,Identity,Lore,Graph,Export chrome
+    class Welcome,NewProject,SampleProject exists
+    class Save partial
+
+    style welcome fill:#fafafa,stroke:#999
+    style intent fill:#fff5f5,stroke:#c62828,stroke-dasharray:3
+    style studio fill:#f5f8ff,stroke:#3f51b5
+    style wins fill:#f5fff5,stroke:#1b5e20

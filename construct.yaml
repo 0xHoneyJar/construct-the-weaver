@@ -31,6 +31,10 @@ skills:
     path: skills/rendering-mermaid
   - slug: prefilling-presets
     path: skills/prefilling-presets
+  - slug: crafting-collaborator-comms
+    path: skills/crafting-collaborator-comms
+    # Operationalizes the herald register (docs/herald-register.md). Travels here
+    # for distribution; long-term home is herald construct via PR.
 
 commands:
   - name: weave
