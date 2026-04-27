@@ -75,6 +75,9 @@ Which produces:
 
 ## GitHub-comment delivery — the canonical pattern
 
+> **Authority**: This section operationalizes the **herald register** ([canonical doctrine](https://github.com/0xHoneyJar/construct-the-weaver/blob/main/samples/dogfood-micodex/constraints.md) / `~/hivemind/wiki/concepts/herald-register.md` / global skill `crafting-collaborator-comms`) for the diagram-bearing-GH-comment surface specifically. When authoring such a comment, the herald register is the umbrella; this section is the surface-specific tactic.
+
+
 For collaborator-facing GitHub comments (issues, PRs), the **native ```mermaid block inside `<details open>` + a mermaid.live edit link** beats embedded PNG thumbnails:
 
 ````markdown
