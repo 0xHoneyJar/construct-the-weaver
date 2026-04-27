@@ -1,0 +1,28 @@
+slug: composing-paths
+name: Composing Paths
+
+description: |
+  Use this skill IF user invokes `/weave compose <intent>` OR needs to map a named
+  user intent to a sequence of construct invocations + handoffs (the flow spec).
+  Refuses to run on unnamed intents — route to naming-intents first.
+version: 0.1.0
+
+triggers:
+  - "/weave compose"
+  - "compose a path"
+  - "map this intent to constructs"
+  - "wire the flow"
+  - "what's the composition for"
+  - "weave the path"
+
+capabilities:
+  model_tier: sonnet
+  danger_level: safe
+  effort_hint: medium
+  downgrade_allowed: true
+  execution_hint: sequential
+  requires:
+    native_runtime: false
+    tool_calling: true
+    thinking_traces: false
+    vision: false

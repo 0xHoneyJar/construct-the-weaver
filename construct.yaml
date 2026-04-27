@@ -1,0 +1,98 @@
+# construct.yaml — the-weaver
+# CURATOR apprenticeship: stages 4 (streams) + 5 (composition) authored 2026-04-27
+# See: https://constructs.network/docs/schema for full reference
+# Validate: yq eval '.' construct.yaml && ajv validate -s schemas/construct.schema.json
+
+schema_version: 3
+
+name: "the-weaver"
+slug: the-weaver
+version: 0.1.0
+description: "Articulates user-pathing — turns user truth from KEEPER into named user flows that compose other constructs"
+short_description: "User-pathing articulation"
+author: 0xHoneyJar
+license: MIT
+type: skill-pack
+visibility: public
+
+domain:
+  - design
+  - operations
+
+# Skills — four authored in cycle 1.
+# Two more (`shaping-journeys`, `diagramming-states`) will migrate from observer/crucible
+# in a follow-up sprint per operator scope decision 2026-04-27.
+skills:
+  - slug: composing-paths
+    path: skills/composing-paths
+  - slug: naming-intents
+    path: skills/naming-intents
+  - slug: rendering-mermaid
+    path: skills/rendering-mermaid
+  - slug: prefilling-presets
+    path: skills/prefilling-presets
+
+commands:
+  - name: weave
+    path: commands/weave.md
+
+# Composition — bidirectional edges. observer→the-weaver is the load-bearing pipe.
+compose_with:
+  - slug: observer
+    relationship: "Reads KEEPER's user truth canvases as upstream signal; surfaces gap signals back to KEEPER for next listening session"
+  - slug: artisan
+    relationship: "Hands flow files to ALEXANDER for material/feel direction on each surface"
+  - slug: the-arcade
+    relationship: "Hands flow files to BARTH for win-state design and OSTROM for structural validation"
+  - slug: rosenzu
+    relationship: "User-pathing × spatial-pathing — the-weaver's flows traverse rosenzu's topology"
+  - slug: crucible
+    relationship: "Hands validated flows to crucible for Playwright test generation via validating-journeys"
+
+# Grimoire interface — paths are the wiring.
+composition_paths:
+  writes:
+    - grimoires/{product}/flows/             # named flow files (mermaid + spec)
+    - grimoires/{product}/proposals/         # construct proposals when gaps surface
+    - grimoires/{product}/intents.yaml       # the named intent vocabulary per product
+  reads:
+    - grimoires/{product}/feedback/keeper/   # KEEPER's listening output (feedback-v3.json)
+    - grimoires/{product}/context/           # PRD, user-description, prior listening synthesis
+    - grimoires/{product}/taste.md           # ARTISAN's taste canon — flow surface direction must respect it
+
+# Stream signature (operator decision 2026-04-27)
+streams:
+  reads:
+    - Intent          # the user's named goal (from KEEPER feedback or product context)
+    - Signal          # gap callouts from other constructs (e.g. "construct X is missing")
+  writes:
+    - Artifact        # flow files, proposal docs, intent vocabularies
+    - Signal          # gap callouts back into the network when a flow surfaces a missing construct
+
+repository:
+  url: https://github.com/0xHoneyJar/construct-the-weaver.git
+  homepage: https://constructs.network/constructs/the-weaver
+
+events:
+  emits:
+    - type: the-weaver.flow.authored
+      description: Emitted when a flow file is written to grimoires/{product}/flows/
+    - type: the-weaver.gap.surfaced
+      description: Emitted when composing-paths references a construct that does not exist
+    - type: the-weaver.intent.named
+      description: Emitted when naming-intents adds a vocabulary entry
+  consumes:
+    - type: observer.canvas.shaped
+      description: Triggers a flow re-author pass when KEEPER's listening produces new truth
+    - type: observer.feedback.emitted
+      description: Reads KEEPER's per-session feedback for vocabulary updates
+
+# Identity
+identity:
+  persona: identity/persona.yaml
+  handles:
+    - BEAUVOIR
+
+quick_start:
+  command: /weave
+  description: "Author a named user flow for this product — drafts go to grimoires/{product}/flows/ as listening worksheets"

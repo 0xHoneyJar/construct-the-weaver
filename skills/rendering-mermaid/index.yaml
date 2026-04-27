@@ -1,0 +1,27 @@
+slug: rendering-mermaid
+name: Rendering Mermaid
+
+description: |
+  Use this skill IF user invokes `/weave render <flow-id>` OR a flow spec exists
+  but the markdown/mermaid file is missing or stale. The visible output emitter.
+version: 0.1.0
+
+triggers:
+  - "/weave render"
+  - "render the flow"
+  - "make me a mermaid"
+  - "diagram this flow"
+  - "show me the flow"
+  - "share this with gumi"
+
+capabilities:
+  model_tier: haiku
+  danger_level: safe
+  effort_hint: small
+  downgrade_allowed: true
+  execution_hint: sequential
+  requires:
+    native_runtime: false
+    tool_calling: true
+    thinking_traces: false
+    vision: false

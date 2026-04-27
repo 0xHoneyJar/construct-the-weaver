@@ -1,0 +1,27 @@
+slug: prefilling-presets
+name: Prefilling Presets
+
+description: |
+  Use this skill IF user invokes `/weave prefill <intent>` OR needs to turn a
+  named intent + flow into a preset bundle (the starting-point template that
+  gets users to a win quickly). Operationalizes intent-based buttons.
+version: 0.1.0
+
+triggers:
+  - "/weave prefill"
+  - "give me a preset"
+  - "intent-based button"
+  - "what would the first screen show"
+  - "prefill the form for this intent"
+
+capabilities:
+  model_tier: haiku
+  danger_level: safe
+  effort_hint: small
+  downgrade_allowed: true
+  execution_hint: sequential
+  requires:
+    native_runtime: false
+    tool_calling: true
+    thinking_traces: false
+    vision: false

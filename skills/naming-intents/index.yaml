@@ -1,0 +1,26 @@
+slug: naming-intents
+name: Naming Intents
+
+description: |
+  Use this skill IF user invokes `/weave name-intents` OR needs to extract the
+  named intent vocabulary from KEEPER canvases. Prerequisite for composing-paths.
+version: 0.1.0
+
+triggers:
+  - "/weave name-intents"
+  - "name the intent"
+  - "what intents does this product have"
+  - "extract intents from listening"
+  - "build the intent vocabulary"
+
+capabilities:
+  model_tier: sonnet
+  danger_level: safe
+  effort_hint: small
+  downgrade_allowed: true
+  execution_hint: sequential
+  requires:
+    native_runtime: false
+    tool_calling: true
+    thinking_traces: false
+    vision: false
