@@ -8,8 +8,8 @@ schema_version: 3
 name: "the-weaver"
 slug: the-weaver
 version: 0.1.0
-description: "Articulates user-pathing — turns user truth from KEEPER into named user flows that compose other constructs"
-short_description: "User-pathing articulation"
+description: "Reads the dance KEEPER hears, writes it down. User-pathing as engineering composition. Persona: BEAUVOIR."
+short_description: "User-pathing as composition"
 author: 0xHoneyJar
 license: MIT
 type: skill-pack

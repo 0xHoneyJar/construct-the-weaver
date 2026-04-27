@@ -3,7 +3,7 @@
 
 # the-weaver
 
-> User-pathing articulation
+> User-pathing as composition
 
 ## About
 
@@ -15,7 +15,7 @@
 | author | 0xHoneyJar |
 | license | MIT |
 
-Articulates user-pathing — turns user truth from KEEPER into named user flows that compose other constructs
+Reads the dance KEEPER hears, writes it down. User-pathing as engineering composition. Persona: BEAUVOIR.
 
 ## Personas
 
