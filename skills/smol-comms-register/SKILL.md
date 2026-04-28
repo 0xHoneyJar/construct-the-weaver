@@ -9,7 +9,7 @@ allowed-tools: Read, Write, Edit, Bash
 
 > **Canonical** at https://github.com/0xHoneyJar/construct-the-weaver/blob/main/skills/smol-comms-register/SKILL.md — this file is a mirror so the skill loads in operator-private sessions before teammates install the pack. **When editing, edit both** until the pack is installed across the team.
 
-When authoring anything a collaborator will read, the doctrine is the **smol-comms-register** (operator handle `/smol`, formal alias `herald-register`) — load-bearing UX named in [`docs/smol-comms-register.md`](https://github.com/0xHoneyJar/construct-the-weaver/blob/main/docs/smol-comms-register.md) (mirrored from `~/hivemind/wiki/concepts/smol-comms-register.md`). This skill is the write-time enforcement.
+When authoring anything a collaborator will read, the doctrine is the **smol-comms-register** (operator handle `/smol`, formal alias `herald-register`) — load-bearing UX named in [`docs/smol-comms-register.md`](https://github.com/0xHoneyJar/construct-the-weaver/blob/main/docs/smol-comms-register.md) (mirrored from `~/vault/wiki/concepts/smol-comms-register.md`). This skill is the write-time enforcement.
 
 ## Trigger
 
@@ -85,7 +85,7 @@ Title block names what the prompt does in one line. Body is structured for *the 
 
 ## Why this register exists
 
-Three load-bearing effects (full prose in `~/hivemind/wiki/concepts/herald-register.md`):
+Three load-bearing effects (full prose in `~/vault/wiki/concepts/herald-register.md`):
 
 1. **Cognitive throughput** — the operator and visual-first collaborators process scannable surfaces faster than reading prose. Walls force sequential reading; this register presents as spatial layout.
 2. **Land-rate** — collaborators bounce off walls. The agent doesn't know they bounced. The cost surfaces later as work that didn't propagate. This register is the gating factor between "agent ships work" and "agent ships work that lands."

@@ -8,12 +8,12 @@ sources:
   - operator 2026-04-27 ("Have we distilled this writing style into a construct or composition... this is strong")
   - operator 2026-04-27 push-back on micodex-studio issue #4 first comment ("way too much to read") — the moment that crystallized the gap
   - team-deliberation 2026-04-27 (alexander + lexicographer + keeper + beauvoir verdicts in `~/.claude/teams/comms-craft-deliberation/`)
-  - ~/hivemind/wiki/concepts/learn-mode.md ("operator's LEARN register" — common-noun precedent that this page promotes to proper-noun)
-  - ~/hivemind/wiki/concepts/compressed-decision-prompts.md (the agent-to-operator dialogue protocol; this register's sibling)
-  - ~/hivemind/wiki/concepts/surface-craft.md (the craft of authoring surfaces; this register is the signature surfaces wear for collaborators)
-  - ~/hivemind/wiki/concepts/feel-register.md (per-world aesthetic precedent — the naming pattern this page mirrors)
-  - ~/hivemind/wiki/concepts/freeside-deceptively-simple-register.md (per-product register precedent)
-  - ~/hivemind/strategy/audiences.md ("four audiences, four registers, four doors" — the broader register taxonomy this slots into)
+  - ~/vault/wiki/concepts/learn-mode.md ("operator's LEARN register" — common-noun precedent that this page promotes to proper-noun)
+  - ~/vault/wiki/concepts/compressed-decision-prompts.md (the agent-to-operator dialogue protocol; this register's sibling)
+  - ~/vault/wiki/concepts/surface-craft.md (the craft of authoring surfaces; this register is the signature surfaces wear for collaborators)
+  - ~/vault/wiki/concepts/feel-register.md (per-world aesthetic precedent — the naming pattern this page mirrors)
+  - ~/vault/wiki/concepts/freeside-deceptively-simple-register.md (per-product register precedent)
+  - ~/vault/strategy/audiences.md ("four audiences, four registers, four doors" — the broader register taxonomy this slots into)
   - .claude/constructs/packs/herald/identity/persona.yaml (the voice this register inherits and applies)
   - .claude/projects/-Users-zksoju-Documents-GitHub-micodex-studio/memory/feedback_collaborator_comm_doctrine.md (the operational rules being absorbed here)
 created: 2026-04-27
