@@ -1,6 +1,8 @@
 ---
 aliases: [smol, smol-comms, smol-comms-register, smol-register, collab-register, collaborator-register, comm-register, the-register-i-keep-using, herald-voice-applied, u-see-wot-u-see-register]
-operator_handle: /smol  # the tongue · `herald-register` is the formal/citable name (composes with feel-register, freeside-register family)
+canonical: smol-comms-register  # promoted to canonical 2026-04-27 by operator
+operator_handle: /smol  # the tongue
+formal_alias: herald-register  # demoted from canonical → alias 2026-04-27. composes with feel-register, freeside-register family
 tags: [doctrine, register, ux, communications, operator-os, load-bearing]
 sources:
   - operator 2026-04-27 ("Have we distilled this writing style into a construct or composition... this is strong")
@@ -31,17 +33,20 @@ edges:
   - {type: anti-pattern-of, target: "[[internal-docs-voice]]", context: title-case headers, multi-paragraph preambles, ceremonial CC lines, swelling bullet lists. the failure mode KEEPER named in the deliberation audit.}
 ---
 
-# Herald Register · `/smol`
+# Smol-Comms-Register · `/smol`
+
+> *"smol-comms-register yes."* — operator 2026-04-27, confirming the canonical name
 
 > *"I think the command or skill for this is smol comms or something like that. /smol"* — operator 2026-04-27, picking the tongue-handle
 
 > *"Have we distilled this writing style into a construct or composition... this is strong."* — operator 2026-04-27, naming the load-bearing thing
 
-**Two names, both load-bearing**:
-- **`/smol`** is the operator-tongue handle + slash command (what you type / say to invoke)
-- **`herald-register`** is the formal name (what gets cited in reviews, composes with `feel-register` / `freeside-register` / audience-registers in the `-register` naming-space)
+**Names**:
+- **`smol-comms-register`** — canonical (use in skill names, file paths, citation)
+- **`/smol`** — operator-tongue handle + slash command (what you type / say to invoke)
+- **`herald-register`** — formal alias (composes with `feel-register` / `freeside-register` / audience-registers in the `-register` naming-space; lexicographer's original anchor pre-rename)
 
-Same doctrine. Two-tier naming pattern (mirrors `/feel` invoking ALEXANDER, `/dig` invoking STAMETS).
+Two-tier invocation pattern (mirrors `/feel` invoking ALEXANDER, `/dig` invoking STAMETS).
 
 > *"Way too much to read."* — operator 2026-04-27, the corrective push-back that minted this doctrine
 

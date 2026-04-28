@@ -1,13 +1,15 @@
 ---
-name: crafting-collaborator-comms
-description: Apply the herald register when authoring collaborator-facing communications — GitHub issue/PR comments, PR descriptions, messages to non-builder teammates (gumi, Eileen, Lily, community members), share-prompts, kickoffs, anything where the audience will scan-and-react. Visual-first, lowercase casual, emoji-as-handles, ≤10 lines prose, image-or-diagram before explanation. NOT for internal docs (specs/RFCs/sprint plans), NOT for agent-to-agent dialogue, NOT when audience is the operator's own deliberation surface (use compressed-decision-prompts AskUserQuestion instead).
+name: smol-comms-register
+description: Apply the smol-comms-register (operator handle `/smol`, formal alias `herald-register`) when authoring collaborator-facing communications — GitHub issue/PR comments, PR descriptions, messages to non-builder teammates (gumi, Eileen, Lily, community members), share-prompts, kickoffs, anything where the audience will scan-and-react. Visual-first, lowercase casual, emoji-as-handles, ≤10 lines prose, image-or-diagram before explanation. NOT for internal docs (specs/RFCs/sprint plans), NOT for agent-to-agent dialogue, NOT when audience is the operator's own deliberation surface (use compressed-decision-prompts AskUserQuestion instead).
 user-invocable: true
 allowed-tools: Read, Write, Edit, Bash
 ---
 
-# Crafting Collaborator Comms — the herald register, operationalized
+# `/smol` — smol-comms-register, operationalized
 
-When authoring anything a collaborator will read, the doctrine is the **herald register** — load-bearing UX named in `~/hivemind/wiki/concepts/herald-register.md`. This skill is the write-time enforcement.
+> **Canonical** at https://github.com/0xHoneyJar/construct-the-weaver/blob/main/skills/smol-comms-register/SKILL.md — this file is a mirror so the skill loads in operator-private sessions before teammates install the pack. **When editing, edit both** until the pack is installed across the team.
+
+When authoring anything a collaborator will read, the doctrine is the **smol-comms-register** (operator handle `/smol`, formal alias `herald-register`) — load-bearing UX named in [`docs/smol-comms-register.md`](https://github.com/0xHoneyJar/construct-the-weaver/blob/main/docs/smol-comms-register.md) (mirrored from `~/hivemind/wiki/concepts/smol-comms-register.md`). This skill is the write-time enforcement.
 
 ## Trigger
 

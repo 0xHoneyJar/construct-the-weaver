@@ -1,6 +1,6 @@
-# /smol — apply the smol comms register
+# /smol — apply the smol-comms-register
 
-Operator handle for the **smol comms register** (formal: `herald-register`). Visual-first, lowercase casual, emoji-as-handles, ≤10 lines prose, image-or-diagram before explanation. The register the operator keeps using and just wants on by default for collaborator-facing surfaces.
+Operator handle for the **smol-comms-register** (formal alias: `herald-register`). Visual-first, lowercase casual, emoji-as-handles, ≤10 lines prose, image-or-diagram before explanation. The register the operator keeps using and just wants on by default for collaborator-facing surfaces.
 
 ## Trigger
 
@@ -49,10 +49,10 @@ Operator handle for the **smol comms register** (formal: `herald-register`). Vis
 
 ## Reference
 
-- 📚 doctrine: https://github.com/0xHoneyJar/construct-the-weaver/blob/main/docs/herald-register.md
-- 🛠 skill: `crafting-collaborator-comms` (auto-loads via description-match, also fires via PreToolUse:Bash hook on `gh issue/pr comment`)
-- 🪶 formal name: `herald-register` (composes with `feel-register`, `freeside-register`, audience-registers)
+- 📚 doctrine: https://github.com/0xHoneyJar/construct-the-weaver/blob/main/docs/smol-comms-register.md
+- 🛠 skill: `smol-comms-register` (auto-loads via description-match, also fires via PreToolUse:Bash hook on `gh issue/pr comment`)
+- 🪶 formal alias: `herald-register` (composes with `feel-register`, `freeside-register`, audience-registers in the `-register` family)
 
 ## Provenance
 
-operator coined "smol comms" 2026-04-27 as the natural tongue-handle for the doctrine the lexicographer construct had named `herald-register`. both names ship — `/smol` is the invocation, `herald-register` is the citable formal name.
+operator coined "smol comms" 2026-04-27 as the natural tongue-handle for the doctrine the lexicographer construct had named `herald-register`. operator confirmed `smol-comms-register` as canonical; `herald-register` demoted to formal alias for vocabulary composition. `/smol` is the invocation.
