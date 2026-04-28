@@ -1,5 +1,6 @@
 ---
-aliases: [collab-register, collaborator-register, comm-register, the-register-i-keep-using, herald-voice-applied, u-see-wot-u-see-register]
+aliases: [smol, smol-comms, smol-comms-register, smol-register, collab-register, collaborator-register, comm-register, the-register-i-keep-using, herald-voice-applied, u-see-wot-u-see-register]
+operator_handle: /smol  # the tongue · `herald-register` is the formal/citable name (composes with feel-register, freeside-register family)
 tags: [doctrine, register, ux, communications, operator-os, load-bearing]
 sources:
   - operator 2026-04-27 ("Have we distilled this writing style into a construct or composition... this is strong")
@@ -30,9 +31,17 @@ edges:
   - {type: anti-pattern-of, target: "[[internal-docs-voice]]", context: title-case headers, multi-paragraph preambles, ceremonial CC lines, swelling bullet lists. the failure mode KEEPER named in the deliberation audit.}
 ---
 
-# Herald Register
+# Herald Register · `/smol`
+
+> *"I think the command or skill for this is smol comms or something like that. /smol"* — operator 2026-04-27, picking the tongue-handle
 
 > *"Have we distilled this writing style into a construct or composition... this is strong."* — operator 2026-04-27, naming the load-bearing thing
+
+**Two names, both load-bearing**:
+- **`/smol`** is the operator-tongue handle + slash command (what you type / say to invoke)
+- **`herald-register`** is the formal name (what gets cited in reviews, composes with `feel-register` / `freeside-register` / audience-registers in the `-register` naming-space)
+
+Same doctrine. Two-tier naming pattern (mirrors `/feel` invoking ALEXANDER, `/dig` invoking STAMETS).
 
 > *"Way too much to read."* — operator 2026-04-27, the corrective push-back that minted this doctrine
 

@@ -39,6 +39,10 @@ skills:
 commands:
   - name: weave
     path: commands/weave.md
+  - name: smol
+    path: commands/smol.md
+    # Operator handle for the smol comms register (formal: herald-register).
+    # Loads crafting-collaborator-comms skill + holds the register active.
 
 # Composition — bidirectional edges. observer→the-weaver is the load-bearing pipe.
 compose_with:
