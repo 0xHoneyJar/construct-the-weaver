@@ -28,9 +28,11 @@ Reads the dance KEEPER hears, writes it down. User-pathing as engineering compos
 - `naming-intents` — Build the named intent vocabulary for a product — the finite set of "things users try to do" extracted from KEEPER's listening canvases. Prerequisite to composing-paths.
 - `prefilling-presets` — Turn named flows into intent-based-button templates and prefilled presets — the things that get users to a quick win without making them configure.
 - `rendering-mermaid` — Render a flow spec as a mermaid diagram in a markdown file. The visible output — what gumi imports into Excalidraw and shares.
+- `smol-comms-register` — Apply the smol-comms-register (operator handle `/smol`, formal alias `herald-register`) when authoring collaborator-facing communications — GitHub issue/PR comments, PR descriptions, messages to non-builder teammates (gumi, Eileen, Lily, community members), share-prompts, kickoffs, anything where the audience will scan-and-react. Visual-first, lowercase casual, emoji-as-handles, ≤10 lines prose, image-or-diagram before explanation. NOT for internal docs (specs/RFCs/sprint plans), NOT for agent-to-agent dialogue, NOT when audience is the operator's own deliberation surface (use compressed-decision-prompts AskUserQuestion instead).
 
 ## Commands
 
+- `/smol` — /smol — apply the smol-comms-register
 - `/weave` — /weave — the-weaver's apprenticeship command
 
 ## Composes with
@@ -41,13 +43,16 @@ _None declared._
 
 **Reads**:
 
+- Artifact
 - Intent
+- Operator-Model
 - Signal
 
 **Writes**:
 
 - Artifact
 - Signal
+- Verdict
 
 ## Grimoires read/write (SEED §12)
 

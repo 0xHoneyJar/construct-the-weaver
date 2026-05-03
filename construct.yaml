@@ -69,13 +69,16 @@ composition_paths:
     - grimoires/{product}/context/           # PRD, user-description, prior listening synthesis
     - grimoires/{product}/taste.md           # ARTISAN's taste canon — flow surface direction must respect it
 
-# Stream signature (operator decision 2026-04-27)
+# Stream signature (operator decision 2026-04-27 · expanded cycle 003 distill 2026-05-03)
 streams:
   reads:
     - Intent          # the user's named goal (from KEEPER feedback or product context)
+    - Operator-Model  # construct manifest map — composing-paths surveys construct.yaml registry to know what each construct can produce
+    - Artifact        # KEEPER's user truth canvases, taste.md, prior flow files
     - Signal          # gap callouts from other constructs (e.g. "construct X is missing")
   writes:
-    - Artifact        # flow files, proposal docs, intent vocabularies
+    - Artifact        # flow files, proposal docs, intent vocabularies, mermaid renders
+    - Verdict         # per-move status (ready/blocked/gap) and gaps_surfaced[] verdicts in flow specs
     - Signal          # gap callouts back into the network when a flow surfaces a missing construct
 
 repository:
